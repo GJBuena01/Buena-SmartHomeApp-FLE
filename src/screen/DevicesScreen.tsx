@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { View, Text, StyleSheet, Pressable, Switch } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Switch, ScrollView } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import type { RootStackParamList } from '../Navigator';
 import React, { useState } from 'react';
@@ -13,7 +13,7 @@ export default function DevicesScreen({ navigation }: Props) {
   const [isLockOn, setIsLockOn] = useState(true);
   
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
 
       <View style={styles.deviceCard}>
         <Pressable style={styles.deviceInfo} onPress={() => navigation.navigate('DeviceDetails', { device: 'light' })}>
@@ -59,7 +59,7 @@ export default function DevicesScreen({ navigation }: Props) {
         <Switch value={isLockOn} onValueChange={setIsLockOn} />
       </View>
       
-    </View>
+    </ScrollView>
   );
 }
 
