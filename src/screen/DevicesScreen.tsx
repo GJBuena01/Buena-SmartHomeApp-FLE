@@ -20,7 +20,7 @@ export default function DevicesScreen({ navigation }: Props) {
           <MaterialCommunityIcons name="lightbulb" size={40} color="#ccd527" />
           <View style={{ marginLeft: 10 }}>
             <Text style={styles.deviceText}>Living Room Light</Text>
-            <Text style={styles.deviceStatus}>Status: On</Text>
+            <Text style={styles.deviceStatus}>Status: {isLightOn ? 'On' : 'Off'}</Text>
           </View>
         </Pressable>
         <Switch value={isLightOn} onValueChange={setIsLightOn} />
@@ -31,7 +31,7 @@ export default function DevicesScreen({ navigation }: Props) {
           <MaterialCommunityIcons name="fan" size={40} color="#13a55a" />
           <View style={{ marginLeft: 10 }}>
             <Text style={styles.deviceText}>Ceiling Fan</Text>
-            <Text style={styles.deviceStatus}>Status: Off</Text>
+            <Text style={styles.deviceStatus}>Status: {isFanOn ? 'On' : 'Off'}</Text>
           </View>
         </Pressable>
         <Switch value={isFanOn} onValueChange={setIsFanOn} />
@@ -42,7 +42,7 @@ export default function DevicesScreen({ navigation }: Props) {
           <MaterialCommunityIcons name="snowflake" size={40} color="#1330a5" />
           <View style={{ marginLeft: 10 }}>
             <Text style={styles.deviceText}>Air Conditioner</Text>
-            <Text style={styles.deviceStatus}>Status: On</Text>
+            <Text style={styles.deviceStatus}>Status: {isACOn ? 'On' : 'Off'}</Text>
           </View>
         </Pressable>
         <Switch value={isACOn} onValueChange={setIsACOn} />
@@ -53,7 +53,7 @@ export default function DevicesScreen({ navigation }: Props) {
           <MaterialCommunityIcons name="lock" size={40} color="#a51313" />
           <View style={{ marginLeft: 10 }}>
             <Text style={styles.deviceText}>Front Door Lock</Text>
-            <Text style={styles.deviceStatus}>Status: Locked</Text>
+            <Text style={styles.deviceStatus}>Status: {isLockOn ? 'Locked' : 'Unlocked'}</Text>
           </View>
         </Pressable>
         <Switch value={isLockOn} onValueChange={setIsLockOn} />
